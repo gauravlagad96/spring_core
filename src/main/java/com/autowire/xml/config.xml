@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- autowire byName and byType -->
+	<!-- <bean class="com.autowire.xml.Address" name="address"> <property name="city" 
+		value="Nagar" /> <property name="village" value="kolgaon" /> </bean> -->
+
+	<!-- autowire by constructor -->
+	<bean class="com.autowire.xml.Address" name="address1">
+		<constructor-arg value="nagar" />
+		<constructor-arg value="kolgaon" />
+	</bean>
+
+
+	<!-- <bean class="com.autowire.xml.Student" name="student" autowire="byName"> 
+		<property name="id" value="11"/> <property name="name" value="gaurav"/> </bean> -->
+
+	<!-- autowire byType -->
+	<!-- <bean class="com.autowire.xml.Student" name="student" autowire="byType"> 
+		<property name="id" value="11" /> <property name="name" value="gaurav" /> 
+		</bean> -->
+
+	<!-- autowire by constructor -->
+	<bean class="com.autowire.xml.Student" name="student"
+		autowire="constructor">
+		<constructor-arg value="1" index="0" />
+		<constructor-arg value="Gaurav" />
+	</bean>
+
+
+
+</beans>
