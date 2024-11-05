@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- for enable annotation based configuration -->
+	<context:annotation-config />
+
+	<bean class="com.ci.autowire.annotation.Address" name="address">
+		<constructor-arg value="Nagar" />
+		<constructor-arg value="kolgaon" />
+	</bean>
+	
+	<bean class="com.ci.autowire.annotation.Address" name="address2">
+		<constructor-arg value="Pnne" />
+		<constructor-arg value="Varje" />
+	</bean>
+
+	<bean class="com.ci.autowire.annotation.Student" name="student">
+		<constructor-arg value="11" type="int" />
+		<constructor-arg value="gaurav" />
+	</bean>
+
+</beans>
