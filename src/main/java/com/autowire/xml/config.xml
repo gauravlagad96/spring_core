@@ -10,9 +10,22 @@
 		value="Nagar" /> <property name="village" value="kolgaon" /> </bean> -->
 
 	<!-- autowire by constructor -->
+
 	<bean class="com.autowire.xml.Address" name="address1">
 		<constructor-arg value="nagar" />
 		<constructor-arg value="kolgaon" />
+	</bean>
+	<bean class="com.autowire.xml.Address" name="address2" primary="true">
+		<constructor-arg value="nagar 2" />
+		<constructor-arg value="kolgaon 2" />
+	</bean>
+	<bean class="com.autowire.xml.Address" name="address3">
+		<constructor-arg value="nagar 3" />
+		<constructor-arg value="kolgaon 3" />
+	</bean>
+	<bean class="com.autowire.xml.Address" name="address4">
+		<constructor-arg value="nagar 4" />
+		<constructor-arg value="kolgaon 4" />
 	</bean>
 
 
