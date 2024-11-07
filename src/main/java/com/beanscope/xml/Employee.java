@@ -1,21 +1,17 @@
-package com.sterotype.xml;
+package com.beanscope.xml;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Employee {
-	@Value("2")
 	private int id;
-	@Value("Gaurav")
 	private String name;
 	
 	
-//	spring expression language
-	@Value("#{ad}")
 	List<String> address;
 	
 	public int getId() {
@@ -46,7 +42,4 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
-
-	
-	
 }

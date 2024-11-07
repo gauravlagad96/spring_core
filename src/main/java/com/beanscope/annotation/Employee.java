@@ -1,12 +1,14 @@
-package com.sterotype.xml;
+package com.beanscope.annotation;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class Employee {
 	@Value("2")
 	private int id;
@@ -14,8 +16,6 @@ public class Employee {
 	private String name;
 	
 	
-//	spring expression language
-	@Value("#{ad}")
 	List<String> address;
 	
 	public int getId() {
@@ -46,7 +46,4 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
-
-	
-	
 }

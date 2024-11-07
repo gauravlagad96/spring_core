@@ -11,14 +11,9 @@
 
 	<!-- for enable annotation based configuration -->
 	<context:component-scan
-		base-package="com.sterotype.xml" />
+		base-package="com.beanscope.annotation" />
 
-<!-- standalone collection  -->
-	<util:list list-class="java.util.ArrayList" id="ad">
-		<value>India</value>
-		<value>Nagar</value>
-		<value>Kolgaon</value>
-	</util:list>
+
 
 </beans>
 
